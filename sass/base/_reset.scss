@@ -1,0 +1,33 @@
+body {
+  margin: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: #ffffff;
+  font-family: "Roboto", sans-serif;
+  letter-spacing: 0.03em;
+  color: var(--title-text-color);
+}
+
+p,
+h1,
+h2,
+h3,
+h4 {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+ul {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-left: 0;
+}
+img {
+  display: block;
+  width: auto;
+}
+.link {
+  text-decoration: none;
+}
+.list {
+  list-style: none;
+}
