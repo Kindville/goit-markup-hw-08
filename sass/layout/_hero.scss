@@ -1,26 +1,65 @@
 .hero {
-  // background-color: #2f303a;
+  background-color: #2f303a;
   padding-bottom: 118px;
   padding-top: 118px;
   padding-left: 60px;
-  // flex-grow: 1;
+  flex-grow: 1;
   background-image: linear-gradient(
       rgba(47, 48, 58, 0.4),
       rgba(47, 48, 58, 0.4)
     ),
-    url(../images/heroimg.jpg);
+    url(../images/heroimgmob.jpg);
   background-size: cover;
+  background-position: center;
   background-repeat: no-repeat;
   & .link:hover,
   & .link:focus {
     background-color: #188ce8;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   }
+
+  @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    background-image: linear-gradient(
+        rgba(47, 48, 58, 0.4),
+        rgba(47, 48, 58, 0.4)
+      ),
+      url(../images/heroimgmob2x.jpg);
+  }
   @media screen and (min-width: 768px) {
     padding: 118px;
+    background-image: linear-gradient(
+        rgba(47, 48, 58, 0.4),
+        rgba(47, 48, 58, 0.4)
+      ),
+      url(../images/heroimgtab.jpg);
+  }
+  @media screen and (min-width: 768px) and (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    background-image: linear-gradient(
+        rgba(47, 48, 58, 0.4),
+        rgba(47, 48, 58, 0.4)
+      ),
+      url(../images/heroimgtab2x.jpg);
   }
   @media screen and (min-width: 1200px) {
     padding: 200px;
+    background-image: linear-gradient(
+        rgba(47, 48, 58, 0.4),
+        rgba(47, 48, 58, 0.4)
+      ),
+      url(../images/heroimg.jpg);
+  }
+  @media screen and (min-width: 1200px) and (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    background-image: linear-gradient(
+        rgba(47, 48, 58, 0.4),
+        rgba(47, 48, 58, 0.4)
+      ),
+      url(../images/heroimg2x.jpg);
   }
 }
 
@@ -36,20 +75,12 @@
   text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   color: var(--third-text-color);
 
-  // @media screen and (min-width: 480px) {
-  //   width: 480px;
-  // }
-
-  // @media screen and (min-width: 768px) {
-  //   width: 768px;
-  // }
-
   @media screen and (min-width: 1200px) {
     font-size: 44px;
   }
 }
 .hero__button {
-  // display: flex;
+  display: flex;
   margin: auto;
   border-radius: 4px;
   padding: 10px 32px;
