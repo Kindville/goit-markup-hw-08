@@ -85,7 +85,8 @@ img {
 }
 
 .header__link {
-  padding: 0;
+  padding-top: 16px;
+  padding-bottom: 16px;
   padding-left: 15px;
   font-family: "Raleway";
   font-weight: bold;
@@ -93,6 +94,20 @@ img {
   line-height: 1.19;
   color: var(--secondary-text-color);
   text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+@media screen and (min-width: 768px) {
+  .header__link {
+    padding-top: 26px;
+    padding-bottom: 26px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .header__link {
+    padding-top: 24px;
+    padding-bottom: 25px;
+  }
 }
 
 .logo-web {
@@ -105,9 +120,9 @@ img {
 }
 
 .menu {
-  margin-right: 15px;
   display: flex;
   align-items: center;
+  justify-content: center;
 }
 
 @media (max-width: 767px) {
@@ -123,6 +138,12 @@ img {
 
 .header__nav-list .current {
   color: var(--accent-color);
+}
+
+@media screen and (min-width: 1200px) {
+  .header__nav-list {
+    margin-left: 93px;
+  }
 }
 
 .header__item {
@@ -168,7 +189,12 @@ img {
   display: block;
   align-items: center;
   justify-content: center;
-  margin-left: 84px;
+}
+
+@media screen and (min-width: 768px) {
+  .contacts__auto-nav {
+    margin-left: 84px;
+  }
 }
 
 @media screen and (min-width: 1200px) {
@@ -176,6 +202,7 @@ img {
     display: flex;
     align-items: baseline;
     justify-content: center;
+    margin-left: 250px;
   }
 }
 
@@ -218,10 +245,12 @@ img {
   fill: currentColor;
 }
 
-.header .container {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+@media (max-width: 1199px) {
+  .header .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
 }
 
 .menu-toggle {
@@ -275,8 +304,8 @@ img {
 }
 
 .mobile-menu {
-  margin-bottom: 302px;
   list-style: none;
+  position: relative;
 }
 
 .mobile-link {
@@ -297,13 +326,19 @@ img {
 }
 
 .mobile-contacts {
-  margin-top: auto;
   margin-bottom: 64px;
   list-style: none;
 }
 
-.mobile-contacts.mobile-phone {
+.mobile-contacts.mobile-phone:not(:last-child) {
   margin-bottom: 32px;
+}
+
+.contacts-socials {
+  position: absolute;
+  bottom: 0;
+  left: 40;
+  padding-bottom: 48px;
 }
 
 .mobile-phone {
@@ -330,6 +365,7 @@ img {
 
 .mobile-socials {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   font-family: Roboto;
   font-style: normal;
@@ -357,7 +393,6 @@ img {
   background-color: #2f303a;
   padding-bottom: 118px;
   padding-top: 118px;
-  padding-left: 60px;
   flex-grow: 1;
   background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/heroimgmob.jpg);
   background-size: cover;
@@ -688,9 +723,16 @@ img {
   background-color: #188ce8;
 }
 
-.features {
+.details {
   padding-top: 60px;
   padding-bottom: 60px;
+}
+
+@media screen and (min-width: 1200px) {
+  .details {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
 }
 
 @media screen and (min-width: 768px) and (max-width: 1199px) {
@@ -768,6 +810,7 @@ img {
 }
 
 .work {
+  padding-top: 94px;
   padding-bottom: 94px;
 }
 
@@ -824,7 +867,8 @@ img {
 
 @media screen and (min-width: 1200px) {
   .team {
-    padding: 94px auto;
+    padding-top: 94px;
+    padding-bottom: 94px;
   }
 }
 
@@ -1218,10 +1262,18 @@ img {
   margin-bottom: 20px;
 }
 
+@media screen and (min-width: 1200px) {
+  .mailing {
+    display: flex;
+    flex-direction: row;
+  }
+}
+
 .mailing__subscribe-place {
-  width: 450px;
+  width: 100%;
   height: 50px;
-  margin: 20px auto;
+  margin: 0;
+  margin-bottom: 20px;
   border: 1px solid rgba(255, 255, 255, 0.3);
   background: transparent;
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
@@ -1230,20 +1282,16 @@ img {
   padding-left: 16px;
 }
 
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 768px) {
   .mailing__subscribe-place {
-    width: 358px;
-    margin-right: 12px;
+    display: flex;
   }
 }
 
-@media screen and (max-width: 1200px) {
+@media screen and (min-width: 1200px) {
   .mailing__subscribe-place {
+    margin-right: 12px;
     width: 358px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
   }
 }
 
@@ -1263,6 +1311,13 @@ img {
   color: #ffffff;
   padding: 10px 29px;
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@media screen and (min-width: 1200px) {
+  .mailing__subscribe-button {
+    display: flex;
+    flex-direction: row;
+  }
 }
 
 .mailing__subscribe-button:hover, .mailing__subscribe-button:focus {
@@ -1356,6 +1411,7 @@ img {
 .portfolio-img {
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
   margin: 0;
+  margin-left: -30px;
 }
 
 @media screen and (min-width: 768px) {

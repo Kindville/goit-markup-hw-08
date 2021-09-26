@@ -4,10 +4,6 @@
   background-color: #2f303a;
 }
 .footer {
-  // @media screen and (min-width: 768px) {
-  //   display: flex;
-  //   flex-wrap: wrap;
-  // }
   @media screen and (min-width: 1200px) {
     display: flex;
     justify-content: center;
@@ -145,22 +141,31 @@
   color: #ffffff;
   margin-bottom: 20px;
 }
+.mailing {
+  @media screen and (min-width: 1200px) {
+    display: flex;
+    flex-direction: row;
+  }
+}
 
 .mailing__subscribe-place {
-  @media screen and (min-width: 1200px) {
-    width: 358px;
-    margin-right: 12px;
-  }
-  @media screen and (max-width: 1200px) {
-    width: 358px;
+  @media screen and (min-width: 768px) {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
   }
-  width: 450px;
+  @media screen and (min-width: 1200px) {
+    margin-right: 12px;
+    width: 358px;
+  }
+  // @media screen and (max-width: 1200px) {
+  //   display: flex;
+  //   flex-wrap: wrap;
+  //   justify-content: center;
+  //   align-items: center;
+  // }
+  width: 100%;
   height: 50px;
-  margin: 20px auto;
+  margin: 0;
+  margin-bottom: 20px;
   border: 1px solid rgba(255, 255, 255, 0.3);
   background: transparent;
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
@@ -170,6 +175,10 @@
 }
 
 .mailing__subscribe-button {
+  @media screen and (min-width: 1200px) {
+    display: flex;
+    flex-direction: row;
+  }
   width: 200px;
   height: 50px;
   background-color: var(--accent-color);
