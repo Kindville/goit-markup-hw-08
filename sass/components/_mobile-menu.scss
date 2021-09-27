@@ -44,6 +44,8 @@
   &.is-open {
     transform: translateX(0);
   }
+  overflow-y: scroll;
+  z-index: 999;
 }
 .menu-container .is-hidden {
   opacity: 0;

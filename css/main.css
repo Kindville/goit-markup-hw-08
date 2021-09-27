@@ -284,6 +284,8 @@ img {
   background-color: #ffffff;
   transform: translateX(100%);
   transition: transform 250ms ease-in-out;
+  overflow-y: scroll;
+  z-index: 999;
 }
 
 .menu-container.is-open {
@@ -810,7 +812,6 @@ img {
 }
 
 .work {
-  padding-top: 94px;
   padding-bottom: 94px;
 }
 
@@ -1285,6 +1286,11 @@ img {
 @media screen and (min-width: 768px) {
   .mailing__subscribe-place {
     display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 450px;
+    margin-right: auto;
+    margin-left: auto;
   }
 }
 
@@ -1455,7 +1461,8 @@ img {
 
 .picture-card {
   height: 100%;
-  width: 100%;
+  display: flex;
+  flex-direction: column;
 }
 
 .picture-text {
